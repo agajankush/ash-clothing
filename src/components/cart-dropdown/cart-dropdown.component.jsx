@@ -10,7 +10,7 @@ const CartDrowdown = () => {
   const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen);
 
   const navigate = useNavigate();
-  const routeChange = () => {
+  const goToCheckoutHandler = () => {
     const path = "/checkout";
     navigate(path);
     toggleIsCartOpen();
@@ -24,7 +24,7 @@ const CartDrowdown = () => {
           <CartItem key={item.id} cartItem={item} />
         ))}
       </div>
-      <Button onClick={routeChange}>GO TO CHECKOUT</Button>
+      <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
     </div>
   );
 };
